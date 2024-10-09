@@ -69,19 +69,25 @@ let pokemon20 = new Pokemon("Sceptile", 12, 12, 7, 6, [leafBlade, razorLeaf], Ty
 let pokemon21 = new Pokemon("Mamoswine", 13, 13, 7, 6, [frostBreath, iceShard], Type.Ice, Math.floor(Math.random() * 100) + 1);
 
 let pokemonElegir = [pokemon1, pokemon2, pokemon3, pokemon4, pokemon5, pokemon6, pokemon7, pokemon8, pokemon9, pokemon10, pokemon11, pokemon12, pokemon13, pokemon14, pokemon15, pokemon16, pokemon17, pokemon18, pokemon19, pokemon20, pokemon21];
+
 let nombreEntrenadorPokemon;
-let nombreEntrenadorRival="Ash";
+let nombreEntrenadorRival = "Ash";
+
 combate();
 
 
 function combate() {
+
     nombreEntrenadorPokemon = readlineSync.question("Ingrese su nombre de entrenador Pokemon: ");
+
     let bucle = true;
+
     while (bucle) {
         console.log("Elige un nivel de juego:")
         console.log("1.Combate 1v1")
         console.log("2.Combate 6v6")
         console.log("3.Salir")
+
         let eleccionCombate = readlineSync.questionInt("");
         switch (eleccionCombate) {
             case 1:
@@ -102,18 +108,23 @@ function combate() {
 
 
 function combateUnoContraUno() {
+
     let pokemonJugadorRandom = Math.floor(Math.random() * pokemonElegir.length);
     let pokemonJugador = pokemonElegir[pokemonJugadorRandom];
     pokemonJugador.escalarEstadisticas();
+
     let pokemonRivalRandom;
+
     do {
         pokemonRivalRandom = Math.floor(Math.random() * pokemonElegir.length);
     } while (pokemonRivalRandom == pokemonJugadorRandom);
 
     let pokemonRival = pokemonElegir[pokemonRivalRandom];
     pokemonRival.escalarEstadisticas();
+
     let limitarCuracionJugador = false;
     let limitarCuracionRival = false;
+
     while (pokemonJugador.hpactual > 0 && pokemonRival.hpactual > 0) {
 
         console.log("\n====== BATALLA POKÉMON ======\n");
@@ -128,13 +139,16 @@ function combateUnoContraUno() {
 
 
         let eleccion = readlineSync.questionInt("1.Atacar 2.Curarse ");
+
         console.log(" ");
         console.log(" ");
         console.log(" ");
         console.log(" ");
+
         switch (eleccion) {
             case 1:
                 console.log("Movimientos disponibles:");
+
                 for (let i = 0; i < pokemonJugador.movimientos.length; i++) {
                     console.log(`${i + 1}. ${pokemonJugador.movimientos[i].nombreMov} (Tipo: ${pokemonJugador.movimientos[i].tipo}, Poder: ${pokemonJugador.movimientos[i].poderMov}, Precision: ${pokemonJugador.movimientos[i].precision}%)`);
                 }
@@ -150,12 +164,14 @@ function combateUnoContraUno() {
                     console.log("Seleccion invalida. Elige un numero valido.");
                     eleccionAtaque = readlineSync.questionInt("Elige un ataque: ");
                 }
+
                 let movimientoJugador = pokemonJugador.movimientos[eleccionAtaque - 1];
                 let cambiarAtacante = true;
                 pokemonJugador.ataquePokemon(pokemonJugador, pokemonRival, cambiarAtacante, movimientoJugador);
                 break;
 
             case 2:
+
                 if (!limitarCuracionJugador) {
                     let cambiarCurador = true;
                     pokemonJugador.curarse(cambiarCurador);
@@ -171,7 +187,9 @@ function combateUnoContraUno() {
             console.log(`¡${pokemonRival.nombre} ha sido derrotado!`);
             break;
         }
+
         let eleccionMaquina = Math.floor(Math.random() * 2) + 1;
+
         switch (eleccionMaquina) {
             case 1:
                 let movimientoMaquina = pokemonRival.movimientos[Math.floor(Math.random() * pokemonRival.movimientos.length)];
@@ -181,8 +199,10 @@ function combateUnoContraUno() {
 
             case 2:
                 if (!limitarCuracionRival) {
+
                     let cambiarCurador = false;
                     let curacionIA = pokemonRival.curarse(cambiarCurador);
+
                     if (curacionIA) {
                         let movimientoMaquina = pokemonRival.movimientos[Math.floor(Math.random() * pokemonRival.movimientos.length)];
                         cambiarAtacante = false;
@@ -190,6 +210,7 @@ function combateUnoContraUno() {
                     } else {
                         limitarCuracionRival = true;
                     }
+
                 } else {
                     let movimientoMaquina = pokemonRival.movimientos[Math.floor(Math.random() * pokemonRival.movimientos.length)];
                     cambiarAtacante = false;
@@ -198,10 +219,12 @@ function combateUnoContraUno() {
                 break;
 
         }
+
         if (pokemonJugador.hpactual <= 0) {
             console.log(`¡${pokemonJugador.nombre} ha sido derrotado!`);
             break;
         }
+
     }
 
     console.log("\n====== BATALLA POKÉMON ======\n");
@@ -211,13 +234,17 @@ function combateUnoContraUno() {
     console.log(`${nombreEntrenadorRival}: ${pokemonRival.nombre}`);
     console.log(`HP: ${pokemonRival.hpactual.toFixed(0)} / ${pokemonRival.hpmaximo}`);
     console.log("\n===========================\n");
+
 }
 
 
 function combateSeisContraSeis() {
+
     let pokemonsJugador = [];
     let pokemonsRival = [];
+
     for (let i = 0; i < 6; i++) {
+
         let pokemonJugadorRandom = Math.floor(Math.random() * pokemonElegir.length);
         let pokemonJugador = pokemonElegir.splice(pokemonJugadorRandom, 1)[0];
         pokemonJugador.escalarEstadisticas();
@@ -227,14 +254,17 @@ function combateSeisContraSeis() {
         let pokemonRival = pokemonElegir.splice(pokemonRivalRandom, 1)[0];
         pokemonRival.escalarEstadisticas();
         pokemonsRival.push(pokemonRival);
+
     }
 
     let numeroPokemonJugador = 0;
     let numeroPokemonRival = 0;
+
     let limitarCuracionJugador = false;
     let limitarCuracionRival = false;
 
     while (pokemonsJugador.length > 0 && pokemonsRival.length > 0) {
+
         let pokemonJugadorActivo = pokemonsJugador[numeroPokemonJugador];
         let pokemonRivalActivo = pokemonsRival[numeroPokemonRival];
 
@@ -249,10 +279,12 @@ function combateSeisContraSeis() {
         console.log("\n===========================\n");
 
         let eleccionJugador = readlineSync.questionInt("1. Atacar 2. Curarse 3. Cambiar de Pokemon: ");
+
         console.log(" ");
         console.log(" ");
         console.log(" ");
         console.log(" ");
+        
         switch (eleccionJugador) {
             case 1:
                 console.log("Movimientos disponibles:");
@@ -267,6 +299,7 @@ function combateSeisContraSeis() {
                     console.log("Seleccion invalida. Elige un numero valido.");
                     eleccionAtaque = readlineSync.questionInt("Elige un ataque: ");
                 }
+
                 console.log(" ");
                 console.log(" ");
                 console.log(" ");
@@ -293,13 +326,17 @@ function combateSeisContraSeis() {
                 pokemonsJugador.forEach((pokemon, index) => {
                     console.log(`${index + 1}. ${pokemon.nombre} (Nivel: ${pokemon.nivel}, HP: ${pokemon.hpactual.toFixed(0)} / ${pokemon.hpmaximo})`);
                 });
+
                 console.log(" ");
                 console.log(" ");
                 console.log(" ");
                 console.log(" ");
+
                 let eleccionNuevoPokemon = readlineSync.questionInt("Selecciona el numero del Pokemon que quieres usar: ");
+
                 console.log(" ");
-                if (pokemonsJugador[eleccionNuevoPokemon-1] == pokemonJugadorActivo) {
+
+                if (pokemonsJugador[eleccionNuevoPokemon - 1] == pokemonJugadorActivo) {
                     console.log(`${pokemonJugadorActivo.nombre} ya es el Pokémon activo. Elige otro.`);
                     continue;
                 }
@@ -308,14 +345,15 @@ function combateSeisContraSeis() {
                     console.log("Selección inválida. Elige un número válido.");
                     eleccionNuevoPokemon = readlineSync.questionInt("Selecciona el numero del Pokemon que quieres usar: ");
                 }
-                console.log(pokemonJugadorActivo.nombre, "se retira")
 
+                console.log(pokemonJugadorActivo.nombre, "se retira")
 
                 numeroPokemonJugador = eleccionNuevoPokemon - 1;
                 pokemonJugadorActivo = pokemonsJugador[numeroPokemonJugador];
                 console.log(`¡Has cambiado a ${pokemonJugadorActivo.nombre}!\n`);
                 break;
         }
+
         if (pokemonsRival.every(pokemon => pokemon.hpactual <= 0)) {
             console.log("¡Todos los Pokemon del rival han sido derrotados! ¡Has ganado!");
             break;
@@ -327,7 +365,9 @@ function combateSeisContraSeis() {
             pokemonRivalActivo = pokemonsRival[numeroPokemonRival];
             console.log(`¡Es el turno de ${pokemonRivalActivo.nombre}!\n`);
         }
+
         let eleccionMaquina = Math.floor(Math.random() * 2) + 1;
+
         switch (eleccionMaquina) {
             case 1:
                 let movimientoMaquina = pokemonRivalActivo.movimientos[Math.floor(Math.random() * pokemonRivalActivo.movimientos.length)];
@@ -339,6 +379,7 @@ function combateSeisContraSeis() {
                 if (!limitarCuracionRival) {
                     let cambiarCurador = false;
                     let curacionIA = pokemonRivalActivo.curarse(cambiarCurador);
+
                     if (curacionIA) {
                         let movimientoMaquina = pokemonRivalActivo.movimientos[Math.floor(Math.random() * pokemonRivalActivo.movimientos.length)];
                         cambiarAtacante = false;
@@ -354,10 +395,12 @@ function combateSeisContraSeis() {
                 break;
 
         }
+
         if (pokemonsJugador.every(pokemon => pokemon.hpactual <= 0)) {
             console.log("¡Todos los Pokemon han sido derrotados! ¡Has perdido!");
             break;
         }
+
         if (pokemonJugadorActivo.hpactual <= 0) {
             console.log(`¡${pokemonJugadorActivo.nombre} ha sido derrotado!`);
             let numeroEliminar = pokemonsJugador.indexOf(pokemonJugadorActivo);
@@ -375,14 +418,13 @@ function combateSeisContraSeis() {
                 eleccionNuevoPokemon = readlineSync.questionInt("Selecciona el número del Pokémon que quieres usar: ");
             }
 
-
-
             numeroPokemonJugador = eleccionNuevoPokemon - 1;
             pokemonJugadorActivo = pokemonsJugador[numeroPokemonJugador];
             console.log(`¡Has cambiado a ${pokemonJugadorActivo.nombre}!\n`);
         }
 
     }
+
     console.log("\n====== BATALLA POKÉMON ======\n");
     console.log(`${nombreEntrenadorPokemon}: ${pokemonJugadorActivo.nombre} (Nivel: ${pokemonJugadorActivo.nivel})`);
     console.log(`Tipo: ${pokemonJugadorActivo.tipo}`);
@@ -392,4 +434,5 @@ function combateSeisContraSeis() {
     console.log(`Tipo: ${pokemonRivalActivo.tipo}`);
     console.log(`HP: ${pokemonRivalActivo.hpactual.toFixed(0)} / ${pokemonRivalActivo.hpmaximo}`);
     console.log("\n===========================\n");
+    
 }
