@@ -71,7 +71,6 @@ let pokemon21 = new Pokemon("Mamoswine", 13, 13, 7, 6, [frostBreath, iceShard], 
 let pokemonElegir = [pokemon1, pokemon2, pokemon3, pokemon4, pokemon5, pokemon6, pokemon7, pokemon8, pokemon9, pokemon10, pokemon11, pokemon12, pokemon13, pokemon14, pokemon15, pokemon16, pokemon17, pokemon18, pokemon19, pokemon20, pokemon21];
 let nombreEntrenadorPokemon;
 let nombreEntrenadorRival="Ash";
-
 combate();
 
 
