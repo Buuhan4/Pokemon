@@ -284,7 +284,7 @@ function combateSeisContraSeis() {
         console.log(" ");
         console.log(" ");
         console.log(" ");
-        
+
         switch (eleccionJugador) {
             case 1:
                 console.log("Movimientos disponibles:");
@@ -364,6 +364,7 @@ function combateSeisContraSeis() {
             pokemonsRival.splice(numeroPokemonRival, 1);
             pokemonRivalActivo = pokemonsRival[numeroPokemonRival];
             console.log(`¡Es el turno de ${pokemonRivalActivo.nombre}!\n`);
+            continue;
         }
 
         let eleccionMaquina = Math.floor(Math.random() * 2) + 1;
@@ -405,6 +406,10 @@ function combateSeisContraSeis() {
             console.log(`¡${pokemonJugadorActivo.nombre} ha sido derrotado!`);
             let numeroEliminar = pokemonsJugador.indexOf(pokemonJugadorActivo);
             pokemonsJugador.splice(numeroEliminar, 1);
+            console.log(" ");
+            console.log(" ");
+            console.log(" ");
+            console.log(" ");
             console.log("Elige un nuevo Pokemon:");
 
             pokemonsJugador.forEach((pokemon, index) => {
@@ -434,5 +439,5 @@ function combateSeisContraSeis() {
     console.log(`Tipo: ${pokemonRivalActivo.tipo}`);
     console.log(`HP: ${pokemonRivalActivo.hpactual.toFixed(0)} / ${pokemonRivalActivo.hpmaximo}`);
     console.log("\n===========================\n");
-    
+
 }
