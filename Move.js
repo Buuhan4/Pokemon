@@ -1,7 +1,9 @@
-class Move{
-    constructor(nameMov,powerMov){
-this.nameMov=nameMov;
-this.powerMov=powerMov;
+class Move {
+    constructor(nombreMov, poderMov, precision, tipo) {
+        this.nombreMov = nombreMov;
+        this.poderMov = poderMov;
+        this.precision = precision;
+        this.tipo = tipo;
     }
 }
-module.exports=Move;
+module.exports = Move;
