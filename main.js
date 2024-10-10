@@ -46,27 +46,27 @@ let razorLeaf = new Move("Razor Leaf", 55, 95, Type.Grass);
 let frostBreath = new Move("Frost Breath", 60, 90, Type.Ice);
 let iceShard = new Move("Ice Shard", 40, 90, Type.Ice);
 
-let pokemon1 = new Pokemon("Charizard", 12, 12, 6, 6, [flamethrower, fly], Type.Fire, Math.floor(Math.random() * 100) + 1);
-let pokemon2 = new Pokemon("Muk", 13, 13, 7, 6, [shadowBall, sludgeBomb], Type.Poison, Math.floor(Math.random() * 100) + 1);
-let pokemon3 = new Pokemon("Dragonite", 13, 13, 7, 7, [outrage, dragonTail], Type.Dragon, Math.floor(Math.random() * 100) + 1);
-let pokemon4 = new Pokemon("Gardevoir", 12, 12, 6, 6, [moonblast, psychic], Type.Fairy, Math.floor(Math.random() * 100) + 1);
-let pokemon5 = new Pokemon("Snorlax", 18, 18, 7, 6, [bodySlam, crunch], Type.Normal, Math.floor(Math.random() * 100) + 1);
-let pokemon6 = new Pokemon("Blastoise", 12, 12, 6, 7, [hydroPump, iceBeam], Type.Water, Math.floor(Math.random() * 100) + 1);
-let pokemon7 = new Pokemon("Umbreon", 13, 13, 6, 7, [darkPulse, foulPlay], Type.Dark, Math.floor(Math.random() * 100) + 1);
-let pokemon8 = new Pokemon("Gengar", 12, 12, 6, 6, [playRough, shadowClaw], Type.Ghost, Math.floor(Math.random() * 100) + 1);
-let pokemon9 = new Pokemon("Lapras", 13, 13, 7, 6, [blizzard, waterPulse], Type.Ice, Math.floor(Math.random() * 100) + 1);
-let pokemon10 = new Pokemon("Venusaur", 12, 12, 6, 6, [solarBeam, petalDance], Type.Grass, Math.floor(Math.random() * 100) + 1);
-let pokemon11 = new Pokemon("Isabel", 2, 2, 6000, 1, [mindfulness, calmMind], Type.Psychic, 10);
-let pokemon12 = new Pokemon("Magikarp", 11, 11, 5, 6, [splash, tackle], Type.Water, Math.floor(Math.random() * 100) + 1);
-let pokemon13 = new Pokemon("Pikachu", 12, 12, 6, 6, [thunderbolt, thunder], Type.Electric, Math.floor(Math.random() * 100) + 1);
-let pokemon14 = new Pokemon("Machamp", 13, 13, 7, 6, [closeCombat, karateChop], Type.Fighting, Math.floor(Math.random() * 100) + 1);
-let pokemon15 = new Pokemon("Donphan", 13, 13, 7, 7, [earthquake, dig], Type.Ground, Math.floor(Math.random() * 100) + 1);
-let pokemon16 = new Pokemon("Golem", 12, 12, 7, 7, [stoneEdge, rockSlide], Type.Rock, Math.floor(Math.random() * 100) + 1);
-let pokemon17 = new Pokemon("Metagross", 15, 15, 12, 12, [ironHead, flashCannon], Type.Steel, Math.floor(Math.random() * 100) + 1);
-let pokemon18 = new Pokemon("Scizor", 12, 12, 7, 7, [xScissor, bugBuzz], Type.Bug, Math.floor(Math.random() * 100) + 1);
-let pokemon19 = new Pokemon("Pidgeot", 12, 12, 6, 6, [hurricane, aerialAce], Type.Flying, Math.floor(Math.random() * 100) + 1);
-let pokemon20 = new Pokemon("Sceptile", 12, 12, 7, 6, [leafBlade, razorLeaf], Type.Grass, Math.floor(Math.random() * 100) + 1);
-let pokemon21 = new Pokemon("Mamoswine", 13, 13, 7, 6, [frostBreath, iceShard], Type.Ice, Math.floor(Math.random() * 100) + 1);
+let pokemon1 = new Pokemon("Charizard", 12, 12, 6, 6, [flamethrower, fly], Type.Fire, Math.floor(Math.random() * 100) + 1, 6);
+let pokemon2 = new Pokemon("Muk", 13, 13, 7, 6, [shadowBall, sludgeBomb], Type.Poison, Math.floor(Math.random() * 100) + 1, 5);
+let pokemon3 = new Pokemon("Dragonite", 13, 13, 7, 7, [outrage, dragonTail], Type.Dragon, Math.floor(Math.random() * 100) + 1, 7);
+let pokemon4 = new Pokemon("Gardevoir", 12, 12, 6, 6, [moonblast, psychic], Type.Fairy, Math.floor(Math.random() * 100) + 1, 6);
+let pokemon5 = new Pokemon("Snorlax", 18, 18, 7, 6, [bodySlam, crunch], Type.Normal, Math.floor(Math.random() * 100) + 1, 6);
+let pokemon6 = new Pokemon("Blastoise", 12, 12, 6, 7, [hydroPump, iceBeam], Type.Water, Math.floor(Math.random() * 100) + 1, 6);
+let pokemon7 = new Pokemon("Umbreon", 13, 13, 6, 7, [darkPulse, foulPlay], Type.Dark, Math.floor(Math.random() * 100) + 1, 8);
+let pokemon8 = new Pokemon("Gengar", 12, 12, 6, 6, [playRough, shadowClaw], Type.Ghost, Math.floor(Math.random() * 100) + 1, 9);
+let pokemon9 = new Pokemon("Lapras", 13, 13, 7, 6, [blizzard, waterPulse], Type.Ice, Math.floor(Math.random() * 100) + 1, 6);
+let pokemon10 = new Pokemon("Venusaur", 12, 12, 6, 6, [solarBeam, petalDance], Type.Grass, Math.floor(Math.random() * 100) + 1, 6);
+let pokemon11 = new Pokemon("Isabel", 2, 2, 6000, 1, [mindfulness, calmMind], Type.Psychic, 10, 1000);
+let pokemon12 = new Pokemon("Magikarp", 11, 11, 5, 6, [splash, tackle], Type.Water, Math.floor(Math.random() * 100) + 1, 5);
+let pokemon13 = new Pokemon("Pikachu", 12, 12, 6, 6, [thunderbolt, thunder], Type.Electric, Math.floor(Math.random() * 100) + 1, 6);
+let pokemon14 = new Pokemon("Machamp", 13, 13, 7, 6, [closeCombat, karateChop], Type.Fighting, Math.floor(Math.random() * 100) + 1, 6);
+let pokemon15 = new Pokemon("Donphan", 13, 13, 7, 7, [earthquake, dig], Type.Ground, Math.floor(Math.random() * 100) + 1, 6);
+let pokemon16 = new Pokemon("Golem", 12, 12, 7, 7, [stoneEdge, rockSlide], Type.Rock, Math.floor(Math.random() * 100) + 1, 7);
+let pokemon17 = new Pokemon("Metagross", 15, 15, 12, 12, [ironHead, flashCannon], Type.Steel, Math.floor(Math.random() * 100) + 1, 8);
+let pokemon18 = new Pokemon("Scizor", 12, 12, 7, 7, [xScissor, bugBuzz], Type.Bug, Math.floor(Math.random() * 100) + 1, 7);
+let pokemon19 = new Pokemon("Pidgeot", 12, 12, 6, 6, [hurricane, aerialAce], Type.Flying, Math.floor(Math.random() * 100) + 1, 7);
+let pokemon20 = new Pokemon("Sceptile", 12, 12, 7, 6, [leafBlade, razorLeaf], Type.Grass, Math.floor(Math.random() * 100) + 1, 8);
+let pokemon21 = new Pokemon("Mamoswine", 13, 13, 7, 6, [frostBreath, iceShard], Type.Ice, Math.floor(Math.random() * 100) + 1, 6);
 
 let pokemonElegir = [pokemon1, pokemon2, pokemon3, pokemon4, pokemon5, pokemon6, pokemon7, pokemon8, pokemon9, pokemon10, pokemon11, pokemon12, pokemon13, pokemon14, pokemon15, pokemon16, pokemon17, pokemon18, pokemon19, pokemon20, pokemon21];
 
@@ -137,87 +137,142 @@ function combateUnoContraUno() {
         console.log(`HP: ${pokemonRival.hpactual.toFixed(0)} / ${pokemonRival.hpmaximo}`);
         console.log("\n===========================\n");
 
-
-        let eleccion = readlineSync.questionInt("1.Atacar 2.Curarse ");
-
-        console.log(" ");
-        console.log(" ");
-        console.log(" ");
-        console.log(" ");
-
-        switch (eleccion) {
-            case 1:
-                console.log("Movimientos disponibles:");
-
-                for (let i = 0; i < pokemonJugador.movimientos.length; i++) {
-                    console.log(`${i + 1}. ${pokemonJugador.movimientos[i].nombreMov} (Tipo: ${pokemonJugador.movimientos[i].tipo}, Poder: ${pokemonJugador.movimientos[i].poderMov}, Precision: ${pokemonJugador.movimientos[i].precision}%)`);
-                }
-
-                let eleccionAtaque = readlineSync.questionInt("Elige un ataque: ");
-                console.log(" ");
-                console.log(" ");
-                console.log(" ");
-                console.log(" ");
-
-
-                while (eleccionAtaque < 1 || eleccionAtaque > pokemonJugador.movimientos.length) {
-                    console.log("Seleccion invalida. Elige un numero valido.");
-                    eleccionAtaque = readlineSync.questionInt("Elige un ataque: ");
-                }
-
-                let movimientoJugador = pokemonJugador.movimientos[eleccionAtaque - 1];
-                let cambiarAtacante = true;
-                pokemonJugador.ataquePokemon(pokemonJugador, pokemonRival, cambiarAtacante, movimientoJugador);
-                break;
-
-            case 2:
-
-                if (!limitarCuracionJugador) {
-                    let cambiarCurador = true;
-                    pokemonJugador.curarse(cambiarCurador);
-                    limitarCuracionJugador = true;
-                } else {
-                    console.log("¡Ya has usado tu curacion! Elige otra accion.");
-                    continue;
-                }
-                break;
+        let jugadorAtacaPrimero = false;
+        if (pokemonJugador.velocidad > pokemonRival.velocidad) {
+            jugadorAtacaPrimero = true;
+        } else if (pokemonJugador.velocidad < pokemonRival.velocidad) {
+            jugadorAtacaPrimero = false;
+        } else {
+            jugadorAtacaPrimero = false;
         }
 
-        if (pokemonRival.hpactual <= 0) {
-            console.log(`¡${pokemonRival.nombre} ha sido derrotado!`);
-            break;
-        }
+        if (jugadorAtacaPrimero) {
+            let eleccion = readlineSync.questionInt("1.Atacar 2.Curarse ");
 
-        let eleccionMaquina = Math.floor(Math.random() * 2) + 1;
-
-        switch (eleccionMaquina) {
-            case 1:
-                let movimientoMaquina = pokemonRival.movimientos[Math.floor(Math.random() * pokemonRival.movimientos.length)];
-                cambiarAtacante = false;
-                pokemonRival.ataquePokemon(pokemonRival, pokemonJugador, cambiarAtacante, movimientoMaquina);
-                break;
-
-            case 2:
-                if (!limitarCuracionRival) {
-
-                    let cambiarCurador = false;
-                    let curacionIA = pokemonRival.curarse(cambiarCurador);
-
-                    if (curacionIA) {
-                        let movimientoMaquina = pokemonRival.movimientos[Math.floor(Math.random() * pokemonRival.movimientos.length)];
-                        cambiarAtacante = false;
-                        pokemonRival.ataquePokemon(pokemonRival, pokemonJugador, cambiarAtacante, movimientoMaquina);
-                    } else {
-                        limitarCuracionRival = true;
+            switch (eleccion) {
+                case 1:
+                    console.log("Movimientos disponibles:");
+                    for (let i = 0; i < pokemonJugador.movimientos.length; i++) {
+                        console.log(`${i + 1}. ${pokemonJugador.movimientos[i].nombreMov} (Tipo: ${pokemonJugador.movimientos[i].tipo}, Poder: ${pokemonJugador.movimientos[i].poderMov}, Precision: ${pokemonJugador.movimientos[i].precision}%)`);
                     }
 
-                } else {
+                    let eleccionAtaque = readlineSync.questionInt("Elige un ataque: ");
+                    while (eleccionAtaque < 1 || eleccionAtaque > pokemonJugador.movimientos.length) {
+                        console.log("Seleccion invalida. Elige un numero valido.");
+                        eleccionAtaque = readlineSync.questionInt("Elige un ataque: ");
+                    }
+
+                    let movimientoJugador = pokemonJugador.movimientos[eleccionAtaque - 1];
+                    let cambiarAtacante = true;
+                    pokemonJugador.ataquePokemon(pokemonJugador, pokemonRival, cambiarAtacante, movimientoJugador);
+                    break;
+
+                case 2:
+                    if (!limitarCuracionJugador) {
+                        let cambiarCurador = true;
+                        pokemonJugador.curarse(cambiarCurador);
+                        limitarCuracionJugador = true;
+                    } else {
+                        console.log("¡Ya has usado tu curacion! Elige otra accion.");
+                        continue;
+                    }
+                    break;
+            }
+
+            if (pokemonRival.hpactual <= 0) {
+                console.log(`¡${pokemonRival.nombre} ha sido derrotado!`);
+                break;
+            }
+
+            let eleccionMaquina = Math.floor(Math.random() * 2) + 1;
+            switch (eleccionMaquina) {
+                case 1:
                     let movimientoMaquina = pokemonRival.movimientos[Math.floor(Math.random() * pokemonRival.movimientos.length)];
                     cambiarAtacante = false;
                     pokemonRival.ataquePokemon(pokemonRival, pokemonJugador, cambiarAtacante, movimientoMaquina);
-                }
-                break;
+                    break;
 
+                case 2:
+                    if (!limitarCuracionRival) {
+                        let cambiarCurador = false;
+                        let curacionIA = pokemonRival.curarse(cambiarCurador);
+                        if (curacionIA) {
+                            let movimientoMaquina = pokemonRival.movimientos[Math.floor(Math.random() * pokemonRival.movimientos.length)];
+                            cambiarAtacante = false;
+                            pokemonRival.ataquePokemon(pokemonRival, pokemonJugador, cambiarAtacante, movimientoMaquina);
+                        } else {
+                            limitarCuracionRival = true;
+                        }
+                    } else {
+                        let movimientoMaquina = pokemonRival.movimientos[Math.floor(Math.random() * pokemonRival.movimientos.length)];
+                        cambiarAtacante = false;
+                        pokemonRival.ataquePokemon(pokemonRival, pokemonJugador, cambiarAtacante, movimientoMaquina);
+                    }
+                    break;
+            }
+        } else {
+            let eleccionMaquina = Math.floor(Math.random() * 2) + 1;
+            switch (eleccionMaquina) {
+                case 1:
+                    let movimientoMaquina = pokemonRival.movimientos[Math.floor(Math.random() * pokemonRival.movimientos.length)];
+                    let cambiarAtacante = false;
+                    pokemonRival.ataquePokemon(pokemonRival, pokemonJugador, cambiarAtacante, movimientoMaquina);
+                    break;
+
+                case 2:
+                    if (!limitarCuracionRival) {
+                        let cambiarCurador = false;
+                        let curacionIA = pokemonRival.curarse(cambiarCurador);
+                        if (curacionIA) {
+                            let movimientoMaquina = pokemonRival.movimientos[Math.floor(Math.random() * pokemonRival.movimientos.length)];
+                            cambiarAtacante = false;
+                            pokemonRival.ataquePokemon(pokemonRival, pokemonJugador, cambiarAtacante, movimientoMaquina);
+                        } else {
+                            limitarCuracionRival = true;
+                        }
+                    } else {
+                        let movimientoMaquina = pokemonRival.movimientos[Math.floor(Math.random() * pokemonRival.movimientos.length)];
+                        cambiarAtacante = false;
+                        pokemonRival.ataquePokemon(pokemonRival, pokemonJugador, cambiarAtacante, movimientoMaquina);
+                    }
+                    break;
+            }
+
+            if (pokemonJugador.hpactual <= 0) {
+                console.log(`¡${pokemonJugador.nombre} ha sido derrotado!`);
+                break;
+            }
+
+            let eleccion = readlineSync.questionInt("1.Atacar 2.Curarse ");
+            switch (eleccion) {
+                case 1:
+                    console.log("Movimientos disponibles:");
+                    for (let i = 0; i < pokemonJugador.movimientos.length; i++) {
+                        console.log(`${i + 1}. ${pokemonJugador.movimientos[i].nombreMov} (Tipo: ${pokemonJugador.movimientos[i].tipo}, Poder: ${pokemonJugador.movimientos[i].poderMov}, Precision: ${pokemonJugador.movimientos[i].precision}%)`);
+                    }
+
+                    let eleccionAtaque = readlineSync.questionInt("Elige un ataque: ");
+                    while (eleccionAtaque < 1 || eleccionAtaque > pokemonJugador.movimientos.length) {
+                        console.log("Seleccion invalida. Elige un numero valido.");
+                        eleccionAtaque = readlineSync.questionInt("Elige un ataque: ");
+                    }
+
+                    let movimientoJugador = pokemonJugador.movimientos[eleccionAtaque - 1];
+                    cambiarAtacante = true;
+                    pokemonJugador.ataquePokemon(pokemonJugador, pokemonRival, cambiarAtacante, movimientoJugador);
+                    break;
+
+                case 2:
+                    if (!limitarCuracionJugador) {
+                        let cambiarCurador = true;
+                        pokemonJugador.curarse(cambiarCurador);
+                        limitarCuracionJugador = true;
+                    } else {
+                        console.log("¡Ya has usado tu curacion! Elige otra accion.");
+                        continue;
+                    }
+                    break;
+            }
         }
 
         if (pokemonJugador.hpactual <= 0) {
@@ -278,6 +333,7 @@ function combateSeisContraSeis() {
         console.log(`HP: ${pokemonRivalActivo.hpactual.toFixed(0)} / ${pokemonRivalActivo.hpmaximo}`);
         console.log("\n===========================\n");
 
+        
         let eleccionJugador = readlineSync.questionInt("1. Atacar 2. Curarse 3. Cambiar de Pokemon: ");
 
         console.log(" ");
@@ -427,17 +483,15 @@ function combateSeisContraSeis() {
             pokemonJugadorActivo = pokemonsJugador[numeroPokemonJugador];
             console.log(`¡Has cambiado a ${pokemonJugadorActivo.nombre}!\n`);
         }
-
+        console.log("\n====== BATALLA POKÉMON ======\n");
+        console.log(`${nombreEntrenadorPokemon}: ${pokemonJugadorActivo.nombre} (Nivel: ${pokemonJugadorActivo.nivel})`);
+        console.log(`Tipo: ${pokemonJugadorActivo.tipo}`);
+        console.log(`HP: ${pokemonJugadorActivo.hpactual.toFixed(0)} / ${pokemonJugadorActivo.hpmaximo}`);
+        console.log("\nVS\n");
+        console.log(`${nombreEntrenadorRival}: ${pokemonRivalActivo.nombre} (Nivel: ${pokemonRivalActivo.nivel})`);
+        console.log(`Tipo: ${pokemonRivalActivo.tipo}`);
+        console.log(`HP: ${pokemonRivalActivo.hpactual.toFixed(0)} / ${pokemonRivalActivo.hpmaximo}`);
+        console.log("\n===========================\n");
     }
-
-    console.log("\n====== BATALLA POKÉMON ======\n");
-    console.log(`${nombreEntrenadorPokemon}: ${pokemonJugadorActivo.nombre} (Nivel: ${pokemonJugadorActivo.nivel})`);
-    console.log(`Tipo: ${pokemonJugadorActivo.tipo}`);
-    console.log(`HP: ${pokemonJugadorActivo.hpactual.toFixed(0)} / ${pokemonJugadorActivo.hpmaximo}`);
-    console.log("\nVS\n");
-    console.log(`${nombreEntrenadorRival}: ${pokemonRivalActivo.nombre} (Nivel: ${pokemonRivalActivo.nivel})`);
-    console.log(`Tipo: ${pokemonRivalActivo.tipo}`);
-    console.log(`HP: ${pokemonRivalActivo.hpactual.toFixed(0)} / ${pokemonRivalActivo.hpmaximo}`);
-    console.log("\n===========================\n");
 
 }
