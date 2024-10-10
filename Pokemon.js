@@ -1,6 +1,6 @@
 const { Type, tipoEfectivo } = require('./Type');
 class Pokemon {
-    constructor(nombre, hpactual, hpmaximo, ataque, defensa, movimientos, tipo, nivel) {
+    constructor(nombre, hpactual, hpmaximo, ataque, defensa, movimientos, tipo, nivel, velocidad) {
         this.nombre = nombre;
         this.hpactual = hpactual;
         this.hpmaximo = hpmaximo;
@@ -9,6 +9,7 @@ class Pokemon {
         this.movimientos = movimientos;
         this.tipo = tipo;
         this.nivel = nivel;
+        this.velocidad = velocidad;
     }
 
 
@@ -131,17 +132,19 @@ class Pokemon {
         }
     }
 
-    
+
     escalarEstadisticas() {
 
         this.hpmaximo = Math.round(this.hpmaximo * (1 + (this.nivel - 1) * 0.1));
 
         this.hpactual = this.hpmaximo;
 
-        this.ataque = Math.round(this.ataque * (1 + (this.nivel - 1) * 0.05));
+        this.ataque = Math.round(this.ataque * (1 + (this.nivel - 1) * 0.08));
 
-        this.defensa = Math.round(this.defensa * (1 + (this.nivel - 1) * 0.05));
-        
+        this.defensa = Math.round(this.defensa * (1 + (this.nivel - 1) * 0.08));
+
+        this.velocidad = Math.round(this.velocidad * (1 + (this.nivel - 1) * 0.08));
+
     }
 }
 module.exports = Pokemon;
