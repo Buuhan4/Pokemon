@@ -89,6 +89,7 @@ function combate() {
         console.log("3.Salir")
 
         let eleccionCombate = readlineSync.questionInt("");
+        
         switch (eleccionCombate) {
             case 1:
                 combateUnoContraUno();
