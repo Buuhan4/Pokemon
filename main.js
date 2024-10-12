@@ -484,15 +484,6 @@ function combateSeisContraSeis() {
             pokemonJugadorActivo = pokemonsJugador[numeroPokemonJugador];
             console.log(`¡Has cambiado a ${pokemonJugadorActivo.nombre}!\n`);
         }
-        console.log("\n====== BATALLA POKÉMON ======\n");
-        console.log(`${nombreEntrenadorPokemon}: ${pokemonJugadorActivo.nombre} (Nivel: ${pokemonJugadorActivo.nivel})`);
-        console.log(`Tipo: ${pokemonJugadorActivo.tipo}`);
-        console.log(`HP: ${pokemonJugadorActivo.hpactual.toFixed(0)} / ${pokemonJugadorActivo.hpmaximo}`);
-        console.log("\nVS\n");
-        console.log(`${nombreEntrenadorRival}: ${pokemonRivalActivo.nombre} (Nivel: ${pokemonRivalActivo.nivel})`);
-        console.log(`Tipo: ${pokemonRivalActivo.tipo}`);
-        console.log(`HP: ${pokemonRivalActivo.hpactual.toFixed(0)} / ${pokemonRivalActivo.hpmaximo}`);
-        console.log("\n===========================\n");
     }
 
 }
